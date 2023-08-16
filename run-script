@@ -1,0 +1,10 @@
+#!/bin/bash
+yum install python3 gcc python3-devel libjpeg-*  -y
+yum install epel-release -y
+yum install stress -y
+pip3 install flask psutil matplotlib requests
+
+mkdir /apps/
+cd /apps/
+wget https://raw.githubusercontent.com/dispiny/stress-api/master/main.py
+nohup python3 main.py &
